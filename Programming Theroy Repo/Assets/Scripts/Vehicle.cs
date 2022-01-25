@@ -11,7 +11,6 @@ public class Vehicle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player.SetMaximumLife(5);
     }
 
 }

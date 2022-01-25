@@ -5,6 +5,11 @@ using UnityEngine;
 public abstract class Character : MonoBehaviour
 {
     public GameObject weapon;
+
+    [SerializeField] protected float speed;
+    [SerializeField] protected float rotationSpeed;
+    [SerializeField] protected float jumpStrength;
+
     private float minimumLife = 10f;
 
     protected float MaximumLife { get; set; }
