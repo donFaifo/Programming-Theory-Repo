@@ -8,9 +8,15 @@ public class Vehicle : MonoBehaviour
     protected Player player;
     public Character driver;
 
-    // Start is called before the first frame update
-    void Start()
-    {
+    protected Rigidbody vehicleRb;
+    protected Collider actionAreaCollider;
+
+    protected void Start() {
+        vehicleRb = GetComponent<Rigidbody>();
+        print("Rigidbody capturado");
+        actionAreaCollider = GetComponent<Collider>();
+        actionAreaCollider.isTrigger = true;
+        print("Collider de acción capturado");
     }
 
 }
