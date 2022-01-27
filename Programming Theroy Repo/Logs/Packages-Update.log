@@ -53,3 +53,12 @@ Update Mode: mergeDefaultDependencies
 The following packages were added:
   com.unity.burst@1.4.4
   com.unity.render-pipelines.universal@10.3.1
+
+=== Thu Jan 27 06:51:29 2022
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.collab-proxy from version 1.15.1 to 1.15.7
+  com.unity.render-pipelines.universal from version 10.3.1 to 10.8.1
