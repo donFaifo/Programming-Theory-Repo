@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Vehicle : MonoBehaviour
+public abstract class Vehicle : MonoBehaviour
 {
 
     protected Player player;
@@ -19,4 +19,5 @@ public class Vehicle : MonoBehaviour
         print("Collider de acción capturado");
     }
 
+    protected abstract void JumpIn();
 }
