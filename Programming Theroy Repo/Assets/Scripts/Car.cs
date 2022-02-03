@@ -16,4 +16,11 @@ public class Car : Vehicle
         }
     }
 
+    protected override void JumpIn()
+    {
+        if(Input.GetKeyDown(KeyCode.E)) {
+            print("Aquí es donde te subes en el coche");
+        }
+    }
+
 }
