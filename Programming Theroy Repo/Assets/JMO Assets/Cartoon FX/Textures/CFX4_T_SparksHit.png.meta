@@ -2,6 +2,7 @@ fileFormatVersion: 2
 guid: a90f18bd790c8ec409e2fa3be62f3ee7
 TextureImporter:
 <<<<<<< HEAD
+<<<<<<< HEAD
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
@@ -15,6 +16,8 @@ TextureImporter:
     mipMapsPreserveCoverage: 0
     alphaTestReferenceValue: 0.5
 =======
+=======
+>>>>>>> main
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -23,12 +26,16 @@ TextureImporter:
     correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     heightScale: 0.25
     normalMapFilter: 0
@@ -107,6 +114,8 @@ TextureImporter:
   assetBundleName: 
   assetBundleVariant: 
 =======
+=======
+>>>>>>> main
     heightScale: .25
     normalMapFilter: 0
   isReadable: 0
@@ -127,4 +136,7 @@ TextureImporter:
   textureType: -1
   buildTargetSettings: []
   userData: 
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main

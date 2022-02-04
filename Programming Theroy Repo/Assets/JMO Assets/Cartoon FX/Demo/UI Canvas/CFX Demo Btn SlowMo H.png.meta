@@ -7,9 +7,15 @@ TextureImporter:
   mipmaps:
     mipMapMode: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
+=======
+    enableMipMap: 0
+    sRGBTexture: 0
+    linearTexture: 1
+>>>>>>> main
 =======
     enableMipMap: 0
     sRGBTexture: 0
@@ -35,8 +41,13 @@ TextureImporter:
   cubemapConvolution: 0
   seamlessCubemap: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   textureFormat: 1
   maxTextureSize: 2048
+=======
+  textureFormat: -3
+  maxTextureSize: 1024
+>>>>>>> main
 =======
   textureFormat: -3
   maxTextureSize: 1024
@@ -47,6 +58,7 @@ TextureImporter:
     aniso: 1
     mipBias: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     wrapU: 0
     wrapV: 0
     wrapW: 0
@@ -55,6 +67,8 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 0
 =======
+=======
+>>>>>>> main
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -62,6 +76,9 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 1
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
   spriteExtrude: 1
   spriteMeshType: 1
@@ -72,9 +89,15 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
   textureType: 0
+=======
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+>>>>>>> main
 =======
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -89,6 +112,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -98,6 +122,8 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 1
 =======
+=======
+>>>>>>> main
   applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
@@ -106,6 +132,9 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
     compressionQuality: 50
     crunchedCompression: 0
@@ -113,8 +142,11 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     forceMaximumCompressionQuality_BC6H_BC7: 0
 =======
+=======
+>>>>>>> main
     forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
     buildTarget: Standalone
@@ -128,6 +160,9 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
   spriteSheet:
     serializedVersion: 2
@@ -136,7 +171,11 @@ TextureImporter:
     physicsShape: []
     bones: []
 <<<<<<< HEAD
+<<<<<<< HEAD
     spriteID: 
+=======
+    spriteID: 5e97eb03825dee720800000000000000
+>>>>>>> main
 =======
     spriteID: 5e97eb03825dee720800000000000000
 >>>>>>> main
