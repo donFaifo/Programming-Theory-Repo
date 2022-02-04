@@ -29,10 +29,11 @@ public class Player : Character
         transform.Translate(speed * Time.deltaTime * verticalInput * Vector3.forward, Space.Self);
         transform.Rotate(horizontalInput * rotationSpeed * Time.deltaTime * Vector3.up, Space.Self);
 
-        if(Input.GetKeyDown(KeyCode.Space)) {
+        if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        {
             playerRb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
             isGrounded = false;
-        }
+        }        
     }
     
     private void FixedUpdate() {
