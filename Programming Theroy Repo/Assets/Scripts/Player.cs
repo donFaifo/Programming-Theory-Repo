@@ -26,8 +26,8 @@ public class Player : Character
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput, Space.Self);
-        transform.Rotate(Vector3.up * Time.deltaTime * rotationSpeed * horizontalInput, Space.Self);
+        transform.Translate(speed * Time.deltaTime * verticalInput * Vector3.forward, Space.Self);
+        transform.Rotate(horizontalInput * rotationSpeed * Time.deltaTime * Vector3.up, Space.Self);
 
         if(Input.GetKeyDown(KeyCode.Space)) {
             playerRb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
