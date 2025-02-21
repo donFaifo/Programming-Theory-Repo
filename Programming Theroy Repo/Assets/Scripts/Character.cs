@@ -1,18 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Character : MonoBehaviour
 {
     public GameObject weapon;
 
-    [SerializeField] protected float speed;
-    [SerializeField] protected float rotationSpeed;
-    [SerializeField] protected float jumpStrength;
+    protected float Speed;
+    protected float RotationSpeed;
+    protected float JumpStrength;
 
     private float minimumLife = 10f;
 
-    protected float MaximumLife { get; set; }
+    protected int MaximumLife { get; set; }
     protected float Life
     {
         get {
@@ -26,12 +24,12 @@ public abstract class Character : MonoBehaviour
 
     protected abstract void UseHability();
 
-    protected virtual void ReceiveDamage(float damageReceived)
+    protected virtual void ReceiveDamage(int damageReceived)
     {
         Life -= damageReceived;
     }
 
-    public virtual void SetMaximumLife(float maximumLife)
+    public virtual void SetMaximumLife(int maximumLife)
     {
         if(maximumLife < minimumLife)
         {

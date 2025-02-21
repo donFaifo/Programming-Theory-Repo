@@ -1,20 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : Character
 {
-    Rigidbody playerRb;
-    [SerializeField] bool isGrounded;
+    public float movementSpeed;
+    public float jumpStrength;
+    public float rotationSpeed;
+    public int maximumLife;
+    
+    private Rigidbody playerRb;
+    [SerializeField] private bool isGrounded;
+    private InputAction moveAction;
+    private InputAction jumpAction;
+    private InputAction lookAction;
 
     private void Start()
     {
-        MaximumLife = 500;
-        speed = 2f;
-        rotationSpeed = 100f;
-        jumpStrength = 150f;
+        MaximumLife = maximumLife;
+        Speed = movementSpeed;
+        RotationSpeed = rotationSpeed;
+        JumpStrength = jumpStrength;
         playerRb = GetComponent<Rigidbody>();
         isGrounded = true;
+        moveAction = InputSystem.actions.FindAction("Move");
+        jumpAction = InputSystem.actions.FindAction("Jump");
+        lookAction = InputSystem.actions.FindAction("Look");
+
     }
 
     protected override void UseHability()
@@ -23,17 +34,20 @@ public class Player : Character
     }
 
     private void Update() {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        var moveValue = moveAction.ReadValue<Vector2>();
+        var lookValue = lookAction.ReadValue<Vector2>();
 
-        transform.Translate(speed * Time.deltaTime * verticalInput * Vector3.forward, Space.Self);
-        transform.Rotate(horizontalInput * rotationSpeed * Time.deltaTime * Vector3.up, Space.Self);
+        transform.Translate(Time.deltaTime*moveValue.x, 0, Time.deltaTime*moveValue.y);
+        transform.Rotate(0,RotationSpeed*lookValue.x,0);
 
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (isGrounded && jumpAction.triggered)
         {
-            playerRb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
+            playerRb.AddForce(0,JumpStrength*100,0);
             isGrounded = false;
-        }        
+        }
+        
+
+
     }
     
     private void FixedUpdate() {
