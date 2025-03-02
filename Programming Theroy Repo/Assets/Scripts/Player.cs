@@ -8,11 +8,11 @@ public class Player : Character
     public float rotationSpeed;
     public int maximumLife;
     
-    private Rigidbody playerRb;
+    private Rigidbody _playerRb;
     [SerializeField] private bool isGrounded;
-    private InputAction moveAction;
-    private InputAction jumpAction;
-    private InputAction lookAction;
+    private InputAction _moveAction;
+    private InputAction _jumpAction;
+    private InputAction _lookAction;
 
     private void Start()
     {
@@ -20,33 +20,27 @@ public class Player : Character
         Speed = movementSpeed;
         RotationSpeed = rotationSpeed;
         JumpStrength = jumpStrength;
-        playerRb = GetComponent<Rigidbody>();
+        _playerRb = GetComponent<Rigidbody>();
         isGrounded = true;
-        moveAction = InputSystem.actions.FindAction("Move");
-        jumpAction = InputSystem.actions.FindAction("Jump");
-        lookAction = InputSystem.actions.FindAction("Look");
+        _moveAction = InputSystem.actions.FindAction("Move");
+        _jumpAction = InputSystem.actions.FindAction("Jump");
+        _lookAction = InputSystem.actions.FindAction("Look");
 
     }
 
-    protected override void UseHability()
+    protected override void UseAbility()
     {
-        // Use Hability
+        // Use Ability
     }
 
     private void Update() {
-        var moveValue = moveAction.ReadValue<Vector2>();
-        var lookValue = lookAction.ReadValue<Vector2>();
+        var moveValue = _moveAction.ReadValue<Vector2>();
+        var lookValue = _lookAction.ReadValue<Vector2>();
 
         transform.Translate(Time.deltaTime*moveValue.x, 0, Time.deltaTime*moveValue.y);
         transform.Rotate(0,RotationSpeed*lookValue.x,0);
 
-        if (isGrounded && jumpAction.triggered)
-        {
-            playerRb.AddForce(0,JumpStrength*100,0);
-            isGrounded = false;
-        }
-        
-
+        if (isGrounded && _jumpAction.triggered) Jump(); // ABSTRACTION
 
     }
     
@@ -60,5 +54,11 @@ public class Player : Character
             
             isGrounded = true;
         }
+    }
+
+    private void Jump()
+    {
+        _playerRb.AddForce(0,JumpStrength*100,0);
+        isGrounded = false;
     }
 }

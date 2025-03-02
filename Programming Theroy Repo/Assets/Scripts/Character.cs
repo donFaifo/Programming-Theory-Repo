@@ -11,7 +11,7 @@ public abstract class Character : MonoBehaviour
     private float minimumLife = 10f;
 
     protected int MaximumLife { get; set; }
-    protected float Life
+    protected float Life // ENCAPSULATION
     {
         get {
             return Life;
@@ -22,7 +22,7 @@ public abstract class Character : MonoBehaviour
         }
     }
 
-    protected abstract void UseHability();
+    protected abstract void UseAbility();
 
     protected virtual void ReceiveDamage(int damageReceived)
     {
